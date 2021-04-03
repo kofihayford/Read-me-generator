@@ -52,24 +52,41 @@ inquirer
     .then((data) => {
         const { questions, test, contribution, license, usage, installation, TableContents, description, title } = data;
         const generateReadMe = `
- 
-    #${title}  
-    ## Description
-    ${description}
-    ## Table of Contents 
-    ${TableContents}  
-    ## Installation Instructions 
-    ${installation}
-    ## Usage 
-    ${usage}
-    ## License 
-    ${license}
-    ## Contribution 
-    ${contribution}
-    ### Testing 
-    ${test}
-    ### Question 
-    ${questions}
+#${title}  
+
+## Description
+
+${description}
+
+## Table of Contents 
+
+${TableContents}  
+
+## Installation Instructions 
+
+${installation}
+
+## Usage 
+
+${usage}
+
+## License 
+
+${license}
+
+## Contribution 
+
+${contribution}
+
+### Testing 
+
+${test}
+
+### Question 
+
+${questions}
+
+
     
     ` ;
 
