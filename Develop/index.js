@@ -1,13 +1,5 @@
-// TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown")
-
-// TODO: Create an array of questions for user input
-
-// WILL USE LATER!
-// const questions = []);
-
 inquirer
     .prompt([
         {
@@ -21,16 +13,15 @@ inquirer
             name: "description",
         },
         {
-            type: "input",
+            type: "list",
             message: "What are the components of this app this app?",
             name: "Table of Contents",
-            // choices: ["Strawberry", "Chocolate", "Vanilla", "Pistachio", "Pizza"],
+            choices: ["installation Instructions," "Usage Information," "Contribution Guidelines,"],
         },
         {
-            type: "list",
+            type: "input",
             message: "How is this app installed and accessed",
             name: "installation",
-            // choices: ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"],
         },
         {
             type: "input",
@@ -58,13 +49,11 @@ inquirer
             name: "questions",
         },
     ])
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
-init();
+    .then((data) => {
+        const { name, location, icecream, harrypotter, fighter } = data;
+        const generateReadMe = `
+    ## Your Task`;
+        fs.writeFile("index.html", generateHTML, (err) =>
+            err ? console.log(err) : console.log("Success!")
+        );
+    });
