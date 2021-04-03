@@ -9,14 +9,14 @@ inquirer
         },
         {
             type: "input",
-            message: "Second question",
+            message: "How would you describe this app? WHat will it be used for?",
             name: "description",
         },
         {
-            type: "list",
+            type: "checbox-plus",
             message: "What are the components of this app this app?",
-            name: "Table of Contents",
-            choices: ["installation Instructions," "Usage Information," "Contribution Guidelines,"],
+            name: "TableContents",
+            default: ["installation Instructions", "Usage Information", "Contribution Guidelines"],
         },
         {
             type: "input",
@@ -36,7 +36,7 @@ inquirer
         {
             type: "input",
             message: "What did you contribute to this project?",
-            name: "usage",
+            name: "contribution",
         },
         {
             type: "input",
@@ -50,10 +50,31 @@ inquirer
         },
     ])
     .then((data) => {
-        const { name, location, icecream, harrypotter, fighter } = data;
+        const { questions, test, contribution, license, usage, installation, TableContents, description, title } = data;
         const generateReadMe = `
-    ## Your Task`;
-        fs.writeFile("index.html", generateHTML, (err) =>
+ 
+    #${title}  
+    ## Description
+    ${description}
+    ## Table of Contents 
+    ${TableContents}  
+    ## Installation Instructions 
+    ${installation}
+    ## Usage 
+    ${usage}
+    ## License 
+    ${license}
+    ## Contribution 
+    ${contribution}
+    ### Testing 
+    ${test}
+    ### Question 
+    ${questions}
+    
+    ` ;
+
+
+        fs.writeFile("readme.md", generateReadMe, (err) =>
             err ? console.log(err) : console.log("Success!")
         );
     });
