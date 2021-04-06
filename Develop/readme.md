@@ -1,37 +1,37 @@
 
-#New stufsd  
+#Lorem Ipsum Readme Inc  
 
 ## Description
 
-fsdkfsdf
+It is a simple app that helps you generate a readme file with ease and simplicity 
 
 ## Table of Contents 
 
-sfask  
+The app requires that you install node and then build a proper index.js file to contain the questions and the logic that presents the questions in a sequential manner.   
 
 ## Installation Instructions 
 
-sdfkas
+Using standard npm i 
 
 ## Usage 
 
-fsdfas
+To save time generating readme files
 
 ## License 
 
-gag
+General
 
 ## Contribution 
 
-aggghkdfg
+I wrote all the code
 
 ### Testing 
 
-fasdf 
+Several. many commits to check the function
 
 ### Question 
 
-gdfa f
+It will be used on all my future repos
 
 
     
